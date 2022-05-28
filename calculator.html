@@ -22,10 +22,53 @@ padding-left:30px; font-size:30px;
 </style>
 <body>
     <div class="case"><a href="index.html"> ᅠ ᅠ ᅠ ᅠ ᅠ</a></div>   <div class="case2"><a href="index.html"> ᅠ ᅠ ᅠ ᅠ ᅠ</a></div> <div class="case3"><a href="index.html"> ᅠ ᅠ ᅠ ᅠ ᅠ</a></div>
-    <img src="https://i.imgur.com/TpepGxo.png">
-    <img src="https://i.imgur.com/DIVuUGg.png">
-    <img src="https://i.imgur.com/iWcjYlg.png">
-    <img src="https://i.imgur.com/ik6qzei.png">
+
+	<input id="chislo1" />
+
+	<div id="knopki">
+	  <button id="plus" onclick="op='+'">+</button>
+	  <button id="minus" onclick="op='-'">-</button>
+	  <button id="umnozh" onclick="op='*'">x</button>
+	  <button id="rezdeli" onclick="op='/'">:</button>
+	</div>
+
+	<input id="chislo2" />
+	<br>
+
+	<button onclick="func()">Посчитать</button>
+
+	<p id="resultat"></p>
+
+	<script>
+
+	  var chisl; 
+
+	  function func() {
+	    var resultat;
+
+	    var chislo1 = Number(document.getElementById("chislo1").value);
+	    var chislo2 = Number(document.getElementById("chislo2").value);
+
+          
+	    switch (chisl) {
+	      case '+':
+	        resultat = chislo1 + chislo2;
+	        break;
+	      case '-':
+	        resultat = chislo1 - chislo2;
+	        break;
+	      case '*':
+	        resultat = chislo1 * chislo2;
+	        break;
+	      case '/':
+	        resultat = chislo1 / chislo2;
+	        break;
+	    }
+
+	    document.getElementById("resultat").innerHTML = result;
+	  }
+	</script>
+    
     <div class="powered">Powered by:
 <a href="https://vk.com/s_n_a_k_e_ez">SNAKE</a>
    <a href="https://vk.com/lolzslavyha">OdinW</a></div>
@@ -33,4 +76,5 @@ padding-left:30px; font-size:30px;
     
 
 </body>
+    
 </html>
