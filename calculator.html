@@ -17,49 +17,44 @@ padding-left:30px; font-size:30px;
 	.knopki{padding-top:500px; font-size:30px;}
 </style>
 <body>
-	<input id="chislo1" />
+	<input id="num1" />
 
-	<div id="knopki">
-	  <button id="plus" onclick="chisl='+'">+</button>
-	  <button id="minus" onclick="chisl='-'">-</button>
-	  <button id="umnozh" onclick="chisl='*'">x</button>
-	  <button id="rezdeli" onclick="chisl='/'">:</button>
+	<div id="operator_btns">
+	  <button id="plus" onclick="op='+'">+</button>
+	  <button id="minus" onclick="op='-'">-</button>
+	  <button id="times" onclick="op='*'">x</button>
+	  <button id="divide" onclick="op='/'">:</button>
 	</div>
 
-	<input id="chislo2" />
+	<input id="num2" />
 	<br>
 
 	<button onclick="func()">Посчитать</button>
 
-	<p id="resultat"></p>
+	<p id="result"></p>
 
+	<!-- наш скрипт -->
 	<script>
-
-	  var chisl; 
-
+	  var op; 
 	  function func() {
-	    var resultat;
-
-	    var chislo1 = Number(document.getElementById("chislo1").value);
-	    var chislo2 = Number(document.getElementById("chislo2").value);
-
-          
-	    switch (chisl) {
+	    var result;
+	    var num1 = Number(document.getElementById("num1").value);
+	    var num2 = Number(document.getElementById("num2").value);
+	    switch (op) {
 	      case '+':
-	        resultat = chislo1 + chislo2;
+	        result = num1 + num2;
 	        break;
 	      case '-':
-	        resultat = chislo1 - chislo2;
+	        result = num1 - num2;
 	        break;
 	      case '*':
-	        resultat = chislo1 * chislo2;
+	        result = num1 * num2;
 	        break;
 	      case '/':
-	        resultat = chislo1 / chislo2;
+	        result = num1 / num2;
 	        break;
 	    }
-
-	    document.getElementById("resultat").innerHTML = result;
+	    document.getElementById("result").innerHTML = result;
 	  }
 	</script>
     
